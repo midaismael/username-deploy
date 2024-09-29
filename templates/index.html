@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Username Accounts Lookup</title>
+    <script>
+        function showLoadingMessage() {
+            // Disable the submit button
+            document.getElementById("submitBtn").disabled = true;
+            // Show the loading message
+            document.getElementById("loadingMessage").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <h1>Enter Username to Get Accounts</h1>
+    <form method="POST" onsubmit="showLoadingMessage()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <button type="submit" id="submitBtn">Submit</button>
+    </form>
+
+    <!-- Loading message -->
+    <p id="loadingMessage" style="display: none;">Please wait, searching...</p>
+</body>
+</html>
